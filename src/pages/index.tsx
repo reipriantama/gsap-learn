@@ -1,15 +1,19 @@
-import Head from 'next/head';
+import MenuButton from "@/components/MenuButton";
+import Head from "next/head";
+import Image from "next/image";
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <Head>
         <title>Template</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
-        <span className="inline-block p-12 text-6xl font-extrabold leading-[1.1] tracking-tighter sm:text-7xl lg:text-8xl xl:text-8xl">
-          Next.js + tailwindcss
-        </span>
+      <main className="mx-auto w-auto">
+        <MenuButton>Menu</MenuButton>
+        <MenuButton>Contact</MenuButton>
+        {/* <button className="... transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-150">
+          <Image src="/next.svg" alt="Vercel Logo" width={200} height={200} />
+        </button> */}
       </main>
     </div>
   );
