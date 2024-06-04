@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MenuButton from "@/components/MenuButton";
+import { HomeHero } from "@/layout";
 import Head from "next/head";
 import Image from "next/image";
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main className="w-auto">
         <Header />
+
         <div className="block px-20 pt-40 text-[7vh]">
           <div>Athens, Greece</div>
           <div>Jaipur, Rajasthan, India</div>
@@ -30,6 +32,9 @@ export default function Home() {
           <div>Seoul, South Korea</div>
           <div>San Miguel de Allende, Mexico</div>
           <div>Queenstown, New Zealand</div>
+        </div>
+        <div className="bg-white">
+          <HomeHero />
         </div>
         {/* <MenuButton>Menu</MenuButton>
         <MenuButton>Contact</MenuButton> */}

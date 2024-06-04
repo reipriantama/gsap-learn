@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import MainLogo from "../Icons";
+import { MainLogo } from "../Icons";
 import gsap from "gsap";
 import MenuButton from "../MenuButton";
 
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="header min-w-screen fixed left-0 top-0 z-10 w-screen px-7 transition-all duration-500 ease-out">
+    <div className="header min-w-screen fixed left-0 top-0 z-10 w-screen px-7 backdrop-blur transition-all duration-500 ease-out">
       <div className="overflow-hidden bg-none">
         <div className="header_container flex items-center justify-between transition-all duration-500 ease-out will-change-transform lg:py-8">
           <MenuButton>Menu</MenuButton>
