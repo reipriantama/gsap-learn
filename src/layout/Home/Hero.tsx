@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
-import { FlowerLogo } from "../../components/Icons";
-import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
+import { FlowerLogo } from "../../assets/Icons";
+import gsap, { Power1 } from "gsap";
 import { CustomEase } from "gsap/dist/CustomEase";
 
 gsap.registerPlugin(CustomEase);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 
 export const HomeHero = () => {
+  const heroInfiniteRef = useRef(null);
   useEffect(() => {
     const titles = document.querySelectorAll(".h_title");
     const tl = gsap.timeline({ defaults: { duration: 1 } });
@@ -19,12 +20,23 @@ export const HomeHero = () => {
         el,
         {
           y: 0,
-          duration: 1.5,
+          duration: 4,
           ease: "cubic-text",
         },
         delay,
       );
     });
+
+    tl.to(
+      heroInfiniteRef.current,
+      {
+        marginLeft: 0,
+        marginRight: 0,
+        opacity: 1,
+        ease: Power1.easeOut,
+      },
+      1.2,
+    );
 
     return () => {};
   }, []);
@@ -94,6 +106,19 @@ export const HomeHero = () => {
               Audience
             </span>
           </span>
+          <div
+            ref={heroInfiniteRef}
+            className="font_aenoik absolute bottom-[-25vw] left-[35%] -mr-10 ml-10 h-8 w-40 opacity-0 overflow-hidden rounded-full border border-black text-xs font-normal uppercase lg:relative lg:bottom-3 lg:left-8 lg:right-[1vw] lg:h-14 lg:w-[16vw] lg:text-xl lg:leading-10"
+          >
+            <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
+              <span className="group-hover:pause animate-loopL">
+                Show Reel 2023© Show Reel 2023©&nbsp;
+              </span>
+              <span className="group-hover:pause animate-loopL">
+                Show Reel 2023© Show Reel 2023©&nbsp;
+              </span>
+            </div>
+          </div>
         </h1>
       </div>
     </div>

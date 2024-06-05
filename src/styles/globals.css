@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
 @font-face {
   font-family: "Aeonik";
   src:
@@ -60,6 +66,10 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+}
+
+html {
+  scroll-behavior: initial;
 }
 
 body {

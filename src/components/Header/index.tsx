@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { MainLogo } from "../Icons";
+import { MainLogo } from "../../assets/Icons";
 import gsap from "gsap";
 import MenuButton from "../MenuButton";
 

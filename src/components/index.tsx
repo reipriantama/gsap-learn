@@ -2,5 +2,5 @@
 
 // export { Button };
 export * from "./Header";
-export * from "./Icons";
+export * from "../assets/Icons";
 export * from "./MenuButton";

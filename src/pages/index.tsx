@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import MenuButton from "@/components/MenuButton";
 import { HomeHero } from "@/layout";
 import Head from "next/head";
-import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -12,8 +11,10 @@ export default function Home() {
       </Head>
       <main className="w-auto">
         <Header />
-
-        <div className="block px-20 pt-40 text-[7vh]">
+        <div className="bg-white">
+          <HomeHero />
+        </div>
+        {/* <div className="block px-20 pt-40 text-[7vh]">
           <div>Athens, Greece</div>
           <div>Jaipur, Rajasthan, India</div>
           <div>Bergen, Norway</div>
@@ -32,10 +33,8 @@ export default function Home() {
           <div>Seoul, South Korea</div>
           <div>San Miguel de Allende, Mexico</div>
           <div>Queenstown, New Zealand</div>
-        </div>
-        <div className="bg-white">
-          <HomeHero />
-        </div>
+        </div> */}
+
         {/* <MenuButton>Menu</MenuButton>
         <MenuButton>Contact</MenuButton> */}
         {/* <button className="... transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-150">
@@ -45,3 +44,5 @@ export default function Home() {
     </div>
   );
 }
+
+// https://www.youtube.com/playlist?list=PLn5wlSL6L0NZfTQbDaVygvCA5hoZ-rRzf
